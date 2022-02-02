@@ -53,7 +53,7 @@ router.post('/login', async (req, res) => {
 				isAdmin: user.isAdmin,
 			},
 			process.env.JWT_SEC,
-			{ expiresIn: '1d' }
+			{ expiresIn: '1h' }
 		);
 		//Successful login - sends back accesstoken and id details
 		const { password, isAdmin, ...others } = user._doc;
